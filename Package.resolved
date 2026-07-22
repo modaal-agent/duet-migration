@@ -1,0 +1,15 @@
+{
+  "originHash" : "4de8b4775fabc605785e1f6527ad3f675d4edd1b35303c82a7bb2c0250920ee3",
+  "pins" : [
+    {
+      "identity" : "combineribs",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/modaal-agent/CombineRIBs.git",
+      "state" : {
+        "revision" : "043622e5eea50d5fecb4e723196830a5d45d0084",
+        "version" : "2.2.0"
+      }
+    }
+  ],
+  "version" : 3
+}
