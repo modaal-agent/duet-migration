@@ -33,6 +33,16 @@ The dual-import discipline travels with the shim: CombineRIBs exports
 bare `Working` identifier — this module is the single sanctioned exception and
 module-qualifies both sides.
 
+## Migration recipes
+
+Recipes live in [docs/](docs/), one page per recipe:
+
+- **[docs/port-or-delete.md](docs/port-or-delete.md)** — what each legacy
+  RIBs shape becomes on the Duet side: the Dependency/Component/Builder triad
+  ports (it is the migration's destination), the Router deletes, the
+  Interactor's logic moves into a `ViewShell`, and the RIBs `Worker` ports
+  through this package's shim.
+
 ## Consuming
 
 ```swift
