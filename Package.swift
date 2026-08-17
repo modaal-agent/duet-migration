@@ -23,17 +23,16 @@ let package = Package(
     .library(name: "DuetCombineRIBsMigration", targets: ["DuetCombineRIBsMigration"])
   ],
   dependencies: [
-    // Local path while Duet is unpublished — flip to
-    // .package(url: "https://github.com/modaal-agent/duet.git", from: …)
-    // at the public release.
-    .package(path: "../modaal-agent-duet"),
+    // The framework, pinned EXACTLY — pre-1.0 minors are breaking by family
+    // convention, so an upgrade is a deliberate re-pin commit.
+    .package(url: "https://github.com/modaal-agent/duet.git", exact: "0.2.1"),
     .package(url: "https://github.com/modaal-agent/CombineRIBs.git", from: "2.1.0"),
   ],
   targets: [
     .target(
       name: "DuetCombineRIBsMigration",
       dependencies: [
-        .product(name: "DuetShells", package: "modaal-agent-duet"),
+        .product(name: "DuetShells", package: "duet"),
         .product(name: "CombineRIBs", package: "CombineRIBs"),
       ]
     ),

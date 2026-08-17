@@ -1,5 +1,5 @@
 {
-  "originHash" : "4de8b4775fabc605785e1f6527ad3f675d4edd1b35303c82a7bb2c0250920ee3",
+  "originHash" : "06bc0dbb46a4ae6897fad9e6c6e9b6a597e314fd848a437283f069e617320767",
   "pins" : [
     {
       "identity" : "combineribs",
@@ -8,6 +8,15 @@
       "state" : {
         "revision" : "043622e5eea50d5fecb4e723196830a5d45d0084",
         "version" : "2.2.0"
+      }
+    },
+    {
+      "identity" : "duet",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/modaal-agent/duet.git",
+      "state" : {
+        "revision" : "aa2b2cfe17ea544351514b41ea0aada5eebebf62",
+        "version" : "0.2.1"
       }
     }
   ],

@@ -47,7 +47,8 @@ Recipes live in [docs/](docs/), one page per recipe:
 
 ```swift
 dependencies: [
-  .package(url: "https://github.com/modaal-agent/duet-migration.git", from: "0.1.0"),
+  .package(url: "https://github.com/modaal-agent/duet-migration.git",
+           .upToNextMinor(from: "0.1.0")),
 ],
 targets: [
   .target(name: "App", dependencies: [
@@ -56,9 +57,9 @@ targets: [
 ]
 ```
 
-While the `duet` repo is unpublished this package references it by local path
-(`../modaal-agent-duet`) — the manifest flips to the URL at Duet's public
-release.
+This package resolves `duet` by URL at an exact tag. Pre-1.0 minors are
+breaking by family convention, so moving to a newer framework tag is a
+deliberate re-pin commit here.
 
 ## License
 
