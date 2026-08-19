@@ -10,5 +10,11 @@
   "no longer"); state what Duet does and what the migrator must do.
 - **Tests run on an iOS simulator destination** — CombineRIBs is UIKit-bound,
   so there is no host (macOS) test lane here.
+- **Test doubles never live in a product's `Sources/`, `#if DEBUG`
+  included.** A DEBUG gate keeps a double out of release binaries, not out of
+  the module's API surface or its compile graph. A double one test target
+  uses lives in that test target; a double shared across targets or with
+  consumers ships in a dedicated test-support library product that only test
+  targets link.
 - **Licensing**: MIT, inbound = outbound; submitting a PR means your
   contribution is licensed under the [MIT License](LICENSE).
